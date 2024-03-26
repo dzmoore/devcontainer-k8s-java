@@ -1,0 +1,46 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:jammy",
+  "build":{
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "enableNonRootDocker": "true",
+      "moby": "true"
+    },
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+      "version": "latest",
+      "helm": "latest",
+      "minikube": "latest"
+    },
+    "ghcr.io/lentzi90/features/tilt:0": {},
+    "ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdkDistro": "tem"
+    },
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
+      "yqVersion": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vscodevim.vim",
+        "ms-azuretools.vscode-docker",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-gradle",
+        "redhat.java",
+        "ms-python.vscode-pylance",
+        "SonarSource.sonarlint-vscode",
+        "tilt-dev.tiltfile"
+      ]
+    }
+  }
+}
+
